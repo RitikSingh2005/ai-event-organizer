@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🤖 AI Event Organiser
 
-## Getting Started
+An AI-powered Event Management Platform built with Next.js, Clerk Authentication, and Convex Backend that allows users to create, explore, and manage events intelligently.
 
-First, run the development server:
+Create events in seconds using AI. Manage tickets. Discover events. All in one platform.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# 🚀 Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🔐 Authentication (Sign In / Sign Up) using Clerk
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+🤖 AI Event Generation (via /api/generate-event)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🎟️ Event Creation & Management
 
-## Learn More
+📍 Location Search & Utilities
 
-To learn more about Next.js, take a look at the following resources:
+🖼️ Unsplash Image Picker Integration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🧾 Ticket Registration System
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🌍 Public Event Exploration
 
-## Deploy on Vercel
+🎨 Modern UI with Theme Support
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+📊 User Dashboard
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🔎 Search Functionality
+
+🧠 Onboarding Modal for New Users
+
+# 🏗️ Tech Stack
+| Technology               | Usage              |
+| ------------------------ | ------------------ |
+| **Next.js (App Router)** | Frontend & Routing |
+| **Clerk**                | Authentication     |
+| **Convex**               | Backend & Database |
+| **Tailwind CSS**         | Styling            |
+| **Unsplash API**         | Event Images       |
+| **AI API**               | Event Generation   |
+
+
+# 📂 Folder Structure
+</> Bash
+ai-event
+│
+├── app/                                # Next.js App Router
+│   │
+│   ├── (auth)/                         # Authentication Routes (Clerk)
+│   │   ├── sign-in/[[...sign-in]]/
+│   │   └── sign-up/[[...sign-up]]/
+│   │   └── layout.js
+│   │
+│   ├── (main)/                         # Protected Routes (Logged-in Users)
+│   │   ├── create-event/
+│   │   ├── my-events/
+│   │   ├── my-tickets/
+│   │   └── layout.js
+│   │
+│   ├── (public)/                       # Public Routes
+│   │   ├── events/
+│   │   │   └── [slug]/                 # Dynamic Event Page
+│   │   └── explore/
+│   │
+│   ├── api/                            # API Routes
+│   │   └── generate-event/
+│   │       └── route.js                # AI Event Generation Logic
+│   │
+│   ├── layout.js                       # Root Layout
+│   ├── page.jsx                        # Landing Page
+│   ├── ConvexClientProvider.jsx        # Convex Provider
+│   ├── globals.css
+│   └── favicon.ico
+│
+├── components/                         # Reusable UI Components
+│   │
+│   ├── ui/                             # ShadCN / UI primitives
+│   │
+│   ├── event-card.jsx
+│   ├── header.jsx
+│   ├── onboarding-modal.jsx
+│   ├── search-location-bar.jsx
+│   ├── theme-provider.jsx
+│   ├── unsplash-image-picker.jsx
+│   └── upgrade-modal.jsx
+│
+├── convex/                             # Convex Backend
+│   │
+│   ├── _generated/                     # Auto-generated Convex files
+│   │
+│   ├── auth.config.js                  # Clerk + Convex auth config
+│   ├── schema.js                       # Database Schema
+│   ├── events.js                       # Event CRUD operations
+│   ├── registrations.js                # Ticket Registration Logic
+│   ├── users.js                        # User management
+│   ├── search.js                       # Search functionality
+│   ├── dashboard.js                    # Dashboard analytics
+│   └── seed.js                         # Seed data
+│
+├── hooks/                              # Custom React Hooks
+│   ├── use-convex-query.jsx
+│   ├── use-onboarding.jsx
+│   └── use-store-user.js
+│
+├── lib/                                # Utility & Helper Functions
+│   ├── data.js
+│   ├── location-utils.js
+│   └── utils.js
+│
+├── public/                             # Static Assets
+│   ├── hero.png
+│   ├── hero.gif
+│   ├── spott.png
+│   └── 3d-react.png
+│
+├── .gitignore
+├── README.md
+├── components.json                     # ShadCN config
+├── eslint.config.mjs
+├── jsconfig.json
+├── next.config.mjs
+├── postcss.config.mjs
+├── proxy.js
+├── package.json
+└── package-lock.json
