@@ -42,7 +42,7 @@ Create events in seconds using AI. Manage tickets. Discover events. All in one p
 # 📂 Folder Structure
 
 ```bash
-ai-event
+ai-event-organizer
 │
 ├── app/                                # Next.js App Router
 │   │
@@ -124,4 +124,25 @@ ai-event
 ├── package.json
 └── package-lock.json
 ```
+# ⚙️ Installation
+### 1️⃣ Clone the repository
+git clone https://github.com/your-username/ai-event-organiser.git
+cd ai-event-organiser
+### 2️⃣ Install dependencies
+npm install
+### 3️⃣ Setup Environment Variables
+###### Create a .env.local file:
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+CONVEX_DEPLOYMENT=
+NEXT_PUBLIC_CONVEX_URL=
+OPENAI_API_KEY=
+UNSPLASH_ACCESS_KEY=
+
+# 📸 Screenshot
+![Image Alt](https://github.com/RitikSingh2005/ai-event-organizer/blob/main/Screenshot%202026-03-01%20001404.png)
+
+# 👨‍💻 Author
+
+Ritik Singh
 
