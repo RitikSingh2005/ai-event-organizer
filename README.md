@@ -40,7 +40,8 @@ Create events in seconds using AI. Manage tickets. Discover events. All in one p
 
 
 # 📂 Folder Structure
-</> Bash
+
+```bash
 ai-event
 │
 ├── app/                                # Next.js App Router
@@ -122,3 +123,5 @@ ai-event
 ├── proxy.js
 ├── package.json
 └── package-lock.json
+```
+
