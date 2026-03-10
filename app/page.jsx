@@ -36,8 +36,8 @@ export default function Home() {
           {/* right */}
           <div>
             <Image
-              src="/hero.png"
-              // src="/hero.gif"
+              // src="/hero.png"
+              src="/hero.gif"
               alt="hero img"
               width={700}
               height={700}
